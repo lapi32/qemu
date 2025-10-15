@@ -4,9 +4,10 @@ services:
     container_name: qemu
     environment:
       BOOT: "arch"
+      DISK_SIZE: "32G"
       RAM_SIZE: "8G"
       CPU_CORES: "4"
-      DISK_SIZE: "128G"
+      # the default 2-core system from github.
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -16,5 +17,5 @@ services:
       - 8006:8006
     volumes:
       - ./qemu:/storage
-    restart: always
+    restart: on-failure
     stop_grace_period: 2m
