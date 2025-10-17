@@ -3,7 +3,7 @@ services:
     image: qemux/qemu
     container_name: qemu
     environment:
-      BOOT: "mint"
+      BOOT: "nixos"
       ALLOCATE: "Y"
       RAM_SIZE: "half"
       DISK_SIZE: "max"
