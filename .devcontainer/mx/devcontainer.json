@@ -1,0 +1,18 @@
+{
+  "name": "MX Linux",
+  "service": "qemu",
+  "containerEnv": {
+    "BOOT": "mx"
+  },  
+  "forwardPorts": [8006],  
+  "portsAttributes": {
+    "8006": {
+      "label": "Web",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "otherPortsAttributes": {
+    "onAutoForward": "silent"
+  }, 
+  "dockerComposeFile": "../codespaces.yml"
+}
